@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.vscode/
+.idea/
+.env
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
