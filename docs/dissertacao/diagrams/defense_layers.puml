@@ -1,0 +1,25 @@
+@startuml
+!theme plain
+skinparam dpi 150
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam ArrowColor #444
+skinparam RectangleBorderColor #333
+
+rectangle "Texto extraído (potencialmente envenenado)" as input #FFE0E0
+
+rectangle "<b>1. Sanitização Unicode</b>     NFKC + strip de tag chars, variation selectors e zero-width" as L1 #E0EEFF
+rectangle "<b>2. Spotlighting (Microsoft 2024)</b>     delimitação explícita e datamarking do conteúdo" as L2 #E0EEFF
+rectangle "<b>3. Alignment (SecAlign / DPO)</b>     política treinada contra instruções embutidas" as L3 #E0EEFF
+rectangle "<b>4. Human-in-the-loop</b>     magistrado revisa o output da IA" as L4 #E0EEFF
+
+rectangle "Análise íntegra" as out #E0FFE0
+
+input -down-> L1
+L1 -down-> L2
+L2 -down-> L3
+L3 -down-> L4
+L4 -down-> out
+
+@enduml

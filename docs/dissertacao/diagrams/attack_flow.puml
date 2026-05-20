@@ -1,0 +1,33 @@
+@startuml
+!theme plain
+skinparam dpi 200
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam ArrowColor #444
+skinparam ParticipantBorderColor #333
+skinparam ParticipantBackgroundColor #fafafa
+skinparam SequenceLifeLineBorderColor #aaa
+skinparam NoteBorderColor #999
+skinparam NoteBackgroundColor #fffbe6
+
+actor "Advogado\n(potencial atacante)" as A
+participant "Sistema do\nTribunal" as T
+participant "Parser\nde PDF" as P
+participant "LLM\n(Galileu / GPT)" as L
+actor Magistrado as M
+
+A -> T : submete petição (PDF\ncom texto invisível)
+T -> P : encaminha para extração
+P -> P : extrai texto bruto
+note right of P
+  Texto extraído inclui
+  instruções invisíveis:
+  white-on-white tipográfico
+  ou caracteres Unicode invisíveis.
+end note
+P -> L : monta prompt\n(pergunta + texto)
+L -> L : tokenização processa\ncaracteres invisíveis
+L -> M : análise (potencialmente viesada)
+M -> M : decide com base\nno output da IA
+@enduml

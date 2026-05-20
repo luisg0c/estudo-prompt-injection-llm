@@ -1,0 +1,20 @@
+@startmindmap
+!theme plain
+skinparam dpi 200
+skinparam defaultFontName Helvetica
+skinparam defaultFontSize 13
+skinparam shadowing false
+
+* Manipular análise\nda IA judicial
+** Nível 1: tipográfico
+*** White-on-white em PDF\n(caso TRT-8, mai/2026)
+** Nível 2: Unicode invisível
+*** Tag characters\n(U+E0020 a U+E007E)
+*** Variation Selectors\n(U+FE00-FE0F, U+E0100-E01EF)
+*** Zero-width chars\n(U+200B-200D, U+FEFF)
+** Nível 3: semântico
+*** Framing autoritativo\nvisível
+*** Homoglyph attacks
+*** Ataques multi-turno
+
+@endmindmap
