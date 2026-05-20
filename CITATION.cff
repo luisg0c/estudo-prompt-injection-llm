@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+title: "Prompt Injection Invisível — Estudo de Caso"
+message: "Estudo de caso técnico sobre prompt injection via caracteres invisíveis Unicode em LLMs, motivado pela sentença do TRT-8 Parauapebas (mai/2026)."
+type: software
+authors:
+  - given-names: Luis Gustavo
+    family-names: Olimpio
+repository-code: "https://github.com/luisg0c/estudo-prompt-injection-llm"
+date-released: 2026-05-13
+license: MIT
+keywords:
+  - prompt-injection
+  - llm-security
+  - unicode
+  - ascii-smuggler
+  - spotlighting
+  - secalign
+  - owasp-llm01
+references:
+  - type: news
+    title: "Juiz multa advogadas por inserirem código secreto em letra invisível"
+    authors:
+      - name: G1 Pará
+    date-released: 2026-05-13
+    url: "https://g1.globo.com/pa/para/noticia/2026/05/13/juiz-multa-advogadas-por-inserirem-codigo-secreto-em-letra-invisivel-para-tentar-enganar-ia-e-sabotar-processo-entenda.ghtml"
+  - type: article
+    title: "Defending Against Indirect Prompt Injection Attacks With Spotlighting"
+    authors:
+      - family-names: Hines
+        given-names: Keegan
+    year: 2024
+    url: "https://arxiv.org/abs/2403.14720"
+  - type: article
+    title: "SecAlign: Defending Against Prompt Injection with Preference Optimization"
+    authors:
+      - family-names: Chen
+        given-names: Sizhe
+    year: 2025
+    url: "https://arxiv.org/abs/2410.05451"
+  - type: article
+    title: "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+    authors:
+      - family-names: Rafailov
+        given-names: Rafael
+    year: 2023
+    url: "https://arxiv.org/abs/2305.18290"
+  - type: report
+    title: "OWASP Top 10 for LLM Applications 2025 - LLM01: Prompt Injection"
+    authors:
+      - name: OWASP Gen AI Security Project
+    year: 2025
+    url: "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"

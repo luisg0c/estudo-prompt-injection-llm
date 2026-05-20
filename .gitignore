@@ -4,6 +4,8 @@ __pycache__/
 .vscode/
 .idea/
 .env
+.DS_Store
+*.bak
 
 # LaTeX build artifacts
 *.aux
